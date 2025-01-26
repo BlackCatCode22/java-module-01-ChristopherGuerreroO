@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>VarsAndMath.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #5f826b; font-style: italic;}
+.s1 { color: #bcbec4;}
+.s2 { color: #cf8e6d;}
+.s3 { color: #bcbec4;}
+.s4 { color: #7a7e85;}
+.s5 { color: #2aacb8;}
+.s6 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+VarsAndMath.java</font>
+</center></td></tr></table>
+<pre><span class="s0">/**</span>
+ <span class="s0">* A simple Java program that demonstrates the use of</span>
+ <span class="s0">* primitive-type variables, arithmetic operations,</span>
+ <span class="s0">* and string concatenation.</span>
+ <span class="s0">*/</span>
+<span class="s2">public class </span><span class="s1">VarsAndMath </span><span class="s3">{</span>
+
+    <span class="s2">public static void </span><span class="s1">main</span><span class="s3">(</span><span class="s1">String</span><span class="s3">[] </span><span class="s1">args</span><span class="s3">) {</span>
+
+        <span class="s4">// Declare primitive-type variables</span>
+        <span class="s2">int </span><span class="s1">num1 </span><span class="s3">= </span><span class="s5">10</span><span class="s3">;</span>
+        <span class="s2">int </span><span class="s1">num2 </span><span class="s3">= </span><span class="s5">5</span><span class="s3">;</span>
+        <span class="s2">double </span><span class="s1">price </span><span class="s3">= </span><span class="s5">15.99</span><span class="s3">;</span>
+        <span class="s2">char </span><span class="s1">grade </span><span class="s3">= </span><span class="s6">'A'</span><span class="s3">;</span>
+        <span class="s2">boolean </span><span class="s1">isPassed </span><span class="s3">= </span><span class="s2">true</span><span class="s3">;</span>
+
+        <span class="s4">// Perform simple arithmetic</span>
+        <span class="s2">int </span><span class="s1">sum </span><span class="s3">= </span><span class="s1">num1 </span><span class="s3">+ </span><span class="s1">num2</span><span class="s3">;</span>
+        <span class="s2">int </span><span class="s1">difference </span><span class="s3">= </span><span class="s1">num1 </span><span class="s3">- </span><span class="s1">num2</span><span class="s3">;</span>
+        <span class="s2">int </span><span class="s1">product </span><span class="s3">= </span><span class="s1">num1 </span><span class="s3">* </span><span class="s1">num2</span><span class="s3">;</span>
+        <span class="s2">double </span><span class="s1">division </span><span class="s3">= (</span><span class="s2">double</span><span class="s3">) </span><span class="s1">num1 </span><span class="s3">/ </span><span class="s1">num2</span><span class="s3">; </span><span class="s4">// Type casting to get decimal result</span>
+
+        <span class="s4">// String concatenation</span>
+        <span class="s1">String message </span><span class="s3">= </span><span class="s6">&quot;The sum of &quot; </span><span class="s3">+ </span><span class="s1">num1 </span><span class="s3">+ </span><span class="s6">&quot; and &quot; </span><span class="s3">+ </span><span class="s1">num2 </span><span class="s3">+ </span><span class="s6">&quot; is &quot; </span><span class="s3">+ </span><span class="s1">sum </span><span class="s3">+ </span><span class="s6">&quot;.&quot;</span><span class="s3">;</span>
+        <span class="s1">String mathDetails </span><span class="s3">= </span><span class="s6">&quot;Product: &quot; </span><span class="s3">+ </span><span class="s1">product </span><span class="s3">+ </span><span class="s6">&quot;, Division: &quot; </span><span class="s3">+ </span><span class="s1">division</span><span class="s3">;</span>
+
+        <span class="s4">// Print results</span>
+        <span class="s1">System</span><span class="s3">.</span><span class="s1">out</span><span class="s3">.</span><span class="s1">println</span><span class="s3">(</span><span class="s1">message</span><span class="s3">);</span>
+        <span class="s1">System</span><span class="s3">.</span><span class="s1">out</span><span class="s3">.</span><span class="s1">println</span><span class="s3">(</span><span class="s6">&quot;The difference is: &quot; </span><span class="s3">+ </span><span class="s1">difference</span><span class="s3">);</span>
+        <span class="s1">System</span><span class="s3">.</span><span class="s1">out</span><span class="s3">.</span><span class="s1">println</span><span class="s3">(</span><span class="s1">mathDetails</span><span class="s3">);</span>
+        <span class="s1">System</span><span class="s3">.</span><span class="s1">out</span><span class="s3">.</span><span class="s1">println</span><span class="s3">(</span><span class="s6">&quot;Item price: $&quot; </span><span class="s3">+ </span><span class="s1">price</span><span class="s3">);</span>
+        <span class="s1">System</span><span class="s3">.</span><span class="s1">out</span><span class="s3">.</span><span class="s1">println</span><span class="s3">(</span><span class="s6">&quot;Grade received: &quot; </span><span class="s3">+ </span><span class="s1">grade</span><span class="s3">);</span>
+        <span class="s1">System</span><span class="s3">.</span><span class="s1">out</span><span class="s3">.</span><span class="s1">println</span><span class="s3">(</span><span class="s6">&quot;Did the student pass? &quot; </span><span class="s3">+ </span><span class="s1">isPassed</span><span class="s3">);</span>
+    <span class="s3">}</span>
+<span class="s3">}</span>
+</pre>
+</body>
+</html>

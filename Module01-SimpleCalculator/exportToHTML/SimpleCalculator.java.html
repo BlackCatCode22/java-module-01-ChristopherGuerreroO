@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>SimpleCalculator.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #6aab73;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+SimpleCalculator.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">Scanner</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">SimpleCalculator </span><span class="s2">{</span>
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+        <span class="s3">// Create a Scanner object for user input</span>
+        <span class="s1">Scanner scanner </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Scanner</span><span class="s2">(</span><span class="s1">System</span><span class="s2">.</span><span class="s1">in</span><span class="s2">);</span>
+
+        <span class="s3">// Prompt the user to enter two numbers</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s4">&quot;Enter the first number: &quot;</span><span class="s2">);</span>
+        <span class="s0">double </span><span class="s1">num1 </span><span class="s2">= </span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextDouble</span><span class="s2">();</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s4">&quot;Enter the second number: &quot;</span><span class="s2">);</span>
+        <span class="s0">double </span><span class="s1">num2 </span><span class="s2">= </span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextDouble</span><span class="s2">();</span>
+
+        <span class="s3">// Perform arithmetic operations</span>
+        <span class="s0">double </span><span class="s1">sum </span><span class="s2">= </span><span class="s1">num1 </span><span class="s2">+ </span><span class="s1">num2</span><span class="s2">;</span>
+        <span class="s0">double </span><span class="s1">difference </span><span class="s2">= </span><span class="s1">num1 </span><span class="s2">- </span><span class="s1">num2</span><span class="s2">;</span>
+        <span class="s0">double </span><span class="s1">product </span><span class="s2">= </span><span class="s1">num1 </span><span class="s2">* </span><span class="s1">num2</span><span class="s2">;</span>
+        <span class="s0">double </span><span class="s1">quotient </span><span class="s2">= (</span><span class="s1">num2 </span><span class="s2">!= </span><span class="s5">0</span><span class="s2">) ? (</span><span class="s1">num1 </span><span class="s2">/ </span><span class="s1">num2</span><span class="s2">) : </span><span class="s1">Double</span><span class="s2">.</span><span class="s1">NaN</span><span class="s2">; </span><span class="s3">// Prevent division by zero</span>
+
+        <span class="s3">// Display the results with formatted output</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;</span><span class="s0">\n</span><span class="s4">Results:&quot;</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">printf</span><span class="s2">(</span><span class="s4">&quot;Addition: %.2f + %.2f = %.2f%n&quot;</span><span class="s2">, </span><span class="s1">num1</span><span class="s2">, </span><span class="s1">num2</span><span class="s2">, </span><span class="s1">sum</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">printf</span><span class="s2">(</span><span class="s4">&quot;Subtraction: %.2f - %.2f = %.2f%n&quot;</span><span class="s2">, </span><span class="s1">num1</span><span class="s2">, </span><span class="s1">num2</span><span class="s2">, </span><span class="s1">difference</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">printf</span><span class="s2">(</span><span class="s4">&quot;Multiplication: %.2f * %.2f = %.2f%n&quot;</span><span class="s2">, </span><span class="s1">num1</span><span class="s2">, </span><span class="s1">num2</span><span class="s2">, </span><span class="s1">product</span><span class="s2">);</span>
+
+        <span class="s3">// Display division result only if the denominator is not zero</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">num2 </span><span class="s2">!= </span><span class="s5">0</span><span class="s2">) {</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">printf</span><span class="s2">(</span><span class="s4">&quot;Division: %.2f / %.2f = %.2f%n&quot;</span><span class="s2">, </span><span class="s1">num1</span><span class="s2">, </span><span class="s1">num2</span><span class="s2">, </span><span class="s1">quotient</span><span class="s2">);</span>
+        <span class="s2">} </span><span class="s0">else </span><span class="s2">{</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Division: Cannot divide by zero.&quot;</span><span class="s2">);</span>
+        <span class="s2">}</span>
+
+        <span class="s3">// Close the scanner</span>
+        <span class="s1">scanner</span><span class="s2">.</span><span class="s1">close</span><span class="s2">();</span>
+    <span class="s2">}</span>
+<span class="s2">}</span></pre>
+</body>
+</html>

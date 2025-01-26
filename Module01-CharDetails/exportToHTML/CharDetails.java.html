@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>CharDetails.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #6aab73;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+CharDetails.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">Scanner</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">CharDetails </span><span class="s2">{</span>
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+        <span class="s3">// Create a Scanner object for user input</span>
+        <span class="s1">Scanner scanner </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Scanner</span><span class="s2">(</span><span class="s1">System</span><span class="s2">.</span><span class="s1">in</span><span class="s2">);</span>
+
+        <span class="s3">// Prompt the user for a single character input</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s4">&quot;Enter a single character: &quot;</span><span class="s2">);</span>
+        <span class="s1">String input </span><span class="s2">= </span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">next</span><span class="s2">(); </span><span class="s3">// Read input as a String</span>
+
+        <span class="s3">// Ensure only a single character is processed</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">input</span><span class="s2">.</span><span class="s1">length</span><span class="s2">() != </span><span class="s5">1</span><span class="s2">) {</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Error: Please enter exactly one character.&quot;</span><span class="s2">);</span>
+        <span class="s2">} </span><span class="s0">else </span><span class="s2">{</span>
+            <span class="s0">char </span><span class="s1">ch </span><span class="s2">= </span><span class="s1">input</span><span class="s2">.</span><span class="s1">charAt</span><span class="s2">(</span><span class="s5">0</span><span class="s2">); </span><span class="s3">// Extract the first character</span>
+
+            <span class="s3">// Display the Unicode value of the character</span>
+            <span class="s0">int </span><span class="s1">unicodeValue </span><span class="s2">= (</span><span class="s0">int</span><span class="s2">) </span><span class="s1">ch</span><span class="s2">;</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;</span><span class="s0">\n</span><span class="s4">Character Details:&quot;</span><span class="s2">);</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">printf</span><span class="s2">(</span><span class="s4">&quot;Character: %c%n&quot;</span><span class="s2">, </span><span class="s1">ch</span><span class="s2">);</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">printf</span><span class="s2">(</span><span class="s4">&quot;Unicode Value: U+%04X%n&quot;</span><span class="s2">, </span><span class="s1">unicodeValue</span><span class="s2">); </span><span class="s3">// Unicode in hexadecimal format</span>
+
+            <span class="s3">// Check if it's a letter or a digit</span>
+            <span class="s0">if </span><span class="s2">(</span><span class="s1">Character</span><span class="s2">.</span><span class="s1">isLetter</span><span class="s2">(</span><span class="s1">ch</span><span class="s2">)) {</span>
+                <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Type: Letter&quot;</span><span class="s2">);</span>
+            <span class="s2">} </span><span class="s0">else if </span><span class="s2">(</span><span class="s1">Character</span><span class="s2">.</span><span class="s1">isDigit</span><span class="s2">(</span><span class="s1">ch</span><span class="s2">)) {</span>
+                <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Type: Digit&quot;</span><span class="s2">);</span>
+            <span class="s2">} </span><span class="s0">else </span><span class="s2">{</span>
+                <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Type: Neither letter nor digit&quot;</span><span class="s2">);</span>
+            <span class="s2">}</span>
+        <span class="s2">}</span>
+
+        <span class="s3">// Close the scanner</span>
+        <span class="s1">scanner</span><span class="s2">.</span><span class="s1">close</span><span class="s2">();</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
